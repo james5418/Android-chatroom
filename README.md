@@ -10,7 +10,7 @@
 
 ## Features
 - Allow a user to chat with many other users simultaneously
-- Apply **sign up** and **login** features by using Firebase Authentication
+- Apply `sign up` and `login` features by using Firebase Authentication
 - Users can easily register accounts through their emails
 - Utilize Firebase Realtime Database to store messages and users' information 
 - When users enter chatrooms or send messages, the page will automatically scroll to the bottom
