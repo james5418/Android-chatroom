@@ -36,26 +36,20 @@ class MainActivity : AppCompatActivity() {
 
         mDbRef.child("user").addValueEventListener(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-
                 userList.clear()
-
                 for(postSnapshot in snapshot.children){
                     val curUser = postSnapshot.getValue((User::class.java))
 
                     if(curUser?.uid != mAuth.currentUser?.uid){
                         userList.add(curUser!!)
                     }
-
                 }
                 adapter.notifyDataSetChanged()
             }
-
             override fun onCancelled(error: DatabaseError) {
 
             }
-
         })
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
