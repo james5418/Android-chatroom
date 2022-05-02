@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chatroom.R.id.txt_name
 
 class UserAdapter(val context: Context, val userList: ArrayList<User>): RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
@@ -35,7 +36,7 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>): Recycler
     }
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-            val txtName = itemView.findViewById<TextView>(R.id.txt_name)
+            val txtName = itemView.findViewById<TextView>(txt_name)
     }
 
 
