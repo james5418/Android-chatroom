@@ -2,15 +2,13 @@ package com.example.chatroom
 
 class Message {
     var message: String? = null
-    var sender: String? = null
+    var senderId: String? = null
 
     constructor(){}
 
-    constructor(message: String?, sender: String?){
+    constructor(message: String?, senderId: String?){
         this.message = message
-        this.sender = sender
+        this.senderId = senderId
     }
-
-
 
 }
