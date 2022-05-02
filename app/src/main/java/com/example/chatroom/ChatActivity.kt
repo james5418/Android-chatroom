@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.ScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -47,6 +48,8 @@ class ChatActivity : AppCompatActivity() {
         chatRecyclerView.layoutManager = LinearLayoutManager(this)
         chatRecyclerView.adapter = messageAdapter
 
+        chatRecyclerView.scrollToPosition(messageList.size - 1)
+
         mDbRef.child("chats").child(senderRoom!!).child("messages")
             .addValueEventListener(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -56,6 +59,8 @@ class ChatActivity : AppCompatActivity() {
                         messageList.add(msg!!)
                     }
                     messageAdapter.notifyDataSetChanged()
+                    
+                    chatRecyclerView.scrollToPosition(messageList.size - 1)
                 }
                 override fun onCancelled(error: DatabaseError) {
 
@@ -74,6 +79,7 @@ class ChatActivity : AppCompatActivity() {
                 }
 
             messageBox.setText("")
+
         }
     }
 }
