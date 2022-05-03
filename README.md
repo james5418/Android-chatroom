@@ -5,7 +5,7 @@
 ![Firebase](https://img.shields.io/badge/Firebase-%23039BE5.svg?logo=firebase)
 ![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?logo=android-studio&logoColor=white)
 
-### A simple chatting application for 2022 Line Tech Fresh - Android
+### A simple Android chatting application
 
 
 ## Features
